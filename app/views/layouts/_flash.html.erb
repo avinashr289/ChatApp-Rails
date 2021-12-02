@@ -1,0 +1,8 @@
+<% flash.each do |message_type,message| %>
+    <div class="ui message transition <%=  message_type=="success" ? :green : :red %>">
+        <i class="close icon"></i>
+        <div class="header">
+            <%= message %>
+        </div>
+    </div>
+<% end %>

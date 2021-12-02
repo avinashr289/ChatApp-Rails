@@ -20,7 +20,7 @@ class UsersController < ApplicationController
             redirect_to root_path
         else
         
-            if(p_mismatch)
+            if(p_mismatch && !@user.errors.any?)
                 @user.errors.add(:base,"Password did not match..Try again!")
             end
 

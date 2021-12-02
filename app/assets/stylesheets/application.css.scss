@@ -5,3 +5,17 @@
 #messages{
     overflow: auto;
 }
+
+.signup-form{
+    margin: 0 auto;
+    display: table;
+}
+
+.custom-error{
+    width:40% !important;
+    margin:20px auto !important;
+}
+
+.custom-error .header{
+    margin-bottom:5px !important;
+}

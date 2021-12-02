@@ -1,0 +1,38 @@
+<h4 class="ui center aligned medium icon header">
+  <i class="circular black user icon"></i>
+  Signup
+</h4>
+
+
+
+
+ <%= form_for("session", html: {class: "ui form signup-form", role: "form"},url: signup_path ) do |f| %>
+  <div class="field">
+    <%= f.label "username","Username" %>
+    <%= f.text_field "username", placeholder: "Username" %>
+  </div>
+  <div class="field">
+    <%= f.label "password","Password" %>
+    <%= f.password_field "password", placeholder: "Password" %>
+  </div>
+  <div class="field">
+    <%= f.label "cpassword","Confirm Password" %>
+    <%= f.password_field "cpassword", placeholder: "Confirm Password" %>
+  </div>
+  
+   <%= f.button "Sign Up", class: "ui blue submit button" %>
+<% end %>
+
+<% if @user.errors.any? %>
+<div class="ui message transition red custom-error">
+    <i class="close icon"></i>
+    <% @user.errors.full_messages.each do |message| %>
+    <div class="header">
+        <%= message %>
+    </div>
+    <% end %>
+
+</div>
+<% end %>
+
+
